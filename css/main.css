@@ -4,3 +4,9 @@
     padding-top: 22%;
 	color: #9E9E9E;
 }
+
+.profile-con{
+    background-color: rgba(0,123,255,.25);
+    padding: 10px 3px 10px 3px;
+    border-radius: 6px;
+}

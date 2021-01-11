@@ -16,7 +16,8 @@
 </head>
 
 <body class="text-white bg-dark">
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="skippy overflow-hidden">
+    <nav class="container-xxl flex-wrap flex-md-nowrap navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">VKS</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +28,22 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Column to String</a>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Converters
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./">Column to String</a></li>
+                </ul>
               </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Commands
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Kubernetes</a></li>
+                  <li><a class="dropdown-item" href="">Kubernetes</a></li>
                   <li><a class="dropdown-item" href="#">Docker</a></li>                  
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Kafka</a></li>
@@ -43,6 +51,7 @@
                   <li><a class="dropdown-item" href="#">SQL</a></li>
 
                 </ul>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Open Libraries
@@ -55,6 +64,33 @@
                 </ul>
               </li>
             </ul>
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                <li class="nav-item col-6 col-md-auto">
+                  <a class="nav-link p-2" href="https://github.com/vinod-kumar-sharma/"" target="_blank" rel="noopener">
+                        <i class="bi bi-github"></i>
+                        <small class="d-md-none ms-2">GitHub</small>
+                  </a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://www.linkedin.com/in/vinod-sharma/" target="_blank" rel="noopener">
+                        <i class="bi bi-linkedin"></i>
+                        <small class="d-md-none ms-2">LinkedIn</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://www.facebook.com/vinodsharma.me" target="_blank" rel="noopener">
+                        <i class="bi bi-facebook"></i>
+                        <small class="d-md-none ms-2">Facebook</small>
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2" href="https://www.youtube.com/channel/UCfsRUbVjaCgx6s1aYaLzopQ" target="_blank" rel="noopener">
+                    <i class="bi bi-youtube"></i>
+                        <small class="d-md-none ms-2">Youtube</small>
+                    </a>
+                </li>
+                
+              </ul>
           </div>
         </div>
       </nav>
@@ -66,14 +102,15 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="input-group">
-                        <span class="input-group-text"><i class="bi bi-grip-vertical"></i>  Column Data</span>
+                       
+                        <button class="btn btn-primary" id="convert"><i class="bi bi-grip-vertical"></i>   Paste Column Data</button>
                         <textarea style="height: 500px;" class="form-control" id="fromData" aria-label="With textarea"></textarea>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="input-group">
+                        <button class="btn btn-primary" id="convert"><i class="bi bi-chevron-double-right"></i> Convert & Copy to clipboard</button>
                         <textarea style="height: 500px;" class="form-control" id="toData" aria-label="With textarea"></textarea>
-                        <button class="btn btn-primary" id="convert"><i class="bi bi-clipboard"></i> Convert & Copy to clipboard</button>
                     </div>
                 </div>
             </div>
@@ -85,5 +122,6 @@
         </div>
         <button type="button" class="btn-close ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
+    </div>
 </body>
 </html>

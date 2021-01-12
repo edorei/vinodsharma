@@ -99,35 +99,20 @@
       <div class="container">
         <div>
             <p class="lead">
-                Convert column to comma separated string
+                Decode string to base64
             </p>
-            <div class="row">
-                <div class="col-sm">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked value="WQ">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                        Without quote
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="NWQ">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                        With quote
-                        </label>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-sm">
                     <div class="input-group">                       
-                        <button class="btn btn-primary" id="pasteContent" disabled><i class="bi bi-grip-vertical"></i>   Paste Column Data</button>
-                        <textarea style="height: 500px;" class="form-control" id="fromData" aria-label="With textarea"></textarea>
+                        <button class="btn btn-primary" id="paste64BaseContent" disabled><i class="bi bi-grip-vertical"></i>   Paste String</button>
+                        <textarea style="height: 500px;" class="form-control" id="base64Data" aria-label="With textarea"></textarea>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="input-group">
-                        <button class="btn btn-primary" id="convert"><i class="bi bi-chevron-double-right"></i> Convert & Copy to clipboard</button>
-                        <textarea style="height: 500px;" class="form-control" id="toData" aria-label="With textarea"></textarea>
+                        <button class="btn btn-primary" id="convertBase64ToString"><i class="bi bi-chevron-double-right"></i> Convert & Copy to clipboard</button>
+                        <textarea style="height: 500px;" class="form-control" id="base64SataToString" aria-label="With textarea"></textarea>
                     </div>
                 </div>
             </div>

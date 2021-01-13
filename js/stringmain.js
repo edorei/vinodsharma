@@ -1,7 +1,7 @@
 
 
 window.onload=function(){
-    console.log("Hello, welcome to vinodsharma.in")
+    console.log("vinodsharma.in/ for developer by developer.")
     if(document.getElementById('convert')) {
         document.getElementById('convert').addEventListener('click', function() {
             convertToJoinedString(document.getElementById("fromData").value, ",", document.querySelector('input[name="flexRadioDefault"]:checked').value);
@@ -24,6 +24,25 @@ window.onload=function(){
             document.execCommand("copy");
         });
     }  
+
+    if(document.getElementById('taskModal')){
+        var taskModal = document.getElementById('taskModal')
+        taskModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        var recipient = button.getAttribute('data-bs-whatever')
+        // If necessary, you could initiate an AJAX request here
+        // and then do the updating in a callback.
+        //
+        // Update the modal's content.
+        var modalTitle = taskModal.querySelector('.modal-title')
+        var modalBodyInput = taskModal.querySelector('.modal-body input')
+
+        modalTitle.textContent = 'New message to ' + recipient
+        modalBodyInput.value = recipient
+    })
+    }
 
     function convertToJoinedString(data, token, instruction) {
         let element = document.getElementById("toData");
